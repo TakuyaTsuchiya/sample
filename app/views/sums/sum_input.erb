@@ -1,0 +1,7 @@
+<h1>Adding app</h1>
+
+<%= form_tag("/addition") do %>
+  <%= text_field :number, :number1, placeholder: "any number.." %> +
+  <%= text_field :number, :number2, placeholder: "any number.."%>
+  <%= submit_tag "Add it up!" %>
+<% end %>

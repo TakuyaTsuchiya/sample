@@ -1,0 +1,14 @@
+<h1>ユーザー登録</h1>
+
+
+<%= form_for('/create') do %>
+<p>
+  <%= text_field :post, :title, size:50, value: "年の例" %>
+</p>
+  <p>
+  <%= text_field :post, :nation, size:25, value: "国の例" %>
+  </p>
+<p>
+  <%= submit_tag '送信' %>
+</p>
+<% end %>

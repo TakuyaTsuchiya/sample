@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get '/users' ,to: 'users#index'
+  post '/create', to: 'users#input_age'
+  get "/aisatu", to: "greets#hello"
+  get "/name", to: "greets#myname"
+  get "/ichi", to: "numbers#one"
+  get '/sum_input', to: 'sums#sum_input'
+  post '/addition', to: 'sums#addition'
 end

@@ -1,0 +1,28 @@
+<h1>僕の名前は土屋拓也</h1>
+
+<p>
+  routes.rb で次のように設定している。
+  URL /nameをgetさせろとサーバーにリクエストすると
+  greetsコントローラーで定義したmyname(greets#myname)アクションを
+  呼び出してレスポンスしろ。
+</p>
+
+<div>
+  このmyname.html.erbファイルはgreetsディレクトリに格納されている
+  greetsディレクトリとgreetsコントローラーは対応している
+  myname.html.erbとmynameアクションは対応している
+</div>
+
+<p>
+  55 フォームからデータをおくろう
+  フォームからデータを送るの大事
+  /createなどURLを指定する
+  送るデータに名前を付与する
+  :form_testの:ageという名前を付ける
+  RoutesでPost /create で送られたデータはusers#input_ageで
+  処理するよう命令する
+  def input_age でrender plainすれば文字列が返される
+  params["form_test"]["age"]で入力内容を受け取れる
+  params変数と付与した名前で呼び出すことができる
+</p>
+
