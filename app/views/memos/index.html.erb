@@ -1,0 +1,10 @@
+<h1>memo一覧</h1>
+
+<input type="button" onclick="location.href='/new'" value="新規作成">
+
+
+<% @memos.each do |memo| %>
+  <br>
+  <%= memo.title %>, <%= memo.body %>
+  <br>
+<% end %>

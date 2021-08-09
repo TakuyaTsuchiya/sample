@@ -1,0 +1,12 @@
+<h1>新規作成</h1>
+
+<%= form_tag('/create') do %>
+  <p>
+    件名；<%= text_field :memos, :title %>
+  </p>
+  <p>
+    内容；<%= text_field :memos, :body %>
+  </p>
+  <%= submit_tag '確定' %>
+<% end %>
+
