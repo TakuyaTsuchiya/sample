@@ -1,0 +1,18 @@
+<h1>編集と更新</h1>
+
+<%= form_tag('/memos/' +@memo.id.to_s, :method=>:patch) do %>
+  <p>
+    件名:<%= text_field :memos, :title, value: @memo.title, :size=>'80' %>
+  </p>
+  <p>
+    内容:<%= text_field :memos, :body, value: @memo.body, :size=>'80' %>
+  </p>
+  <p>
+    カテゴリ:
+    <%= select_tag "memos[category_id]",
+                   options_from_collection_for_select(@categories, "id", "name", "1")
+    %>
+  </p>
+  <%= submit_tag '更新' %>
+<% end %>
+

@@ -1,10 +1,15 @@
 <h1>memo一覧</h1>
 
-<input type="button" onclick="location.href='/new'" value="新規作成">
+<input type="button" onclick="location.href='/new'" value="新規作成ページへ">
 
 
 <% @memos.each do |memo| %>
-  <br>
-  <%= memo.title %>, <%= memo.body %>
-  <br>
+  <p>
+    メモID：<%= memo.id %> <br>
+    件名：<%= memo.title %> <br>
+    内容：<%= memo.body %> <br>
+    カテゴリ：<%= memo.category.name %>
+  <p>
+    <a href="/memos/<%= memo.id %>" data-method="delete">削除</a>
+    <a href="/memos/<%= memo.id %>/edit">編集</a>
 <% end %>
